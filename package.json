@@ -1,0 +1,61 @@
+{
+  "name": "n8n-nodes-pathors",
+  "version": "0.1.1",
+  "description": "n8n community node for Pathors - AI voice agent platform",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "n8n-node",
+    "pathors",
+    "ai",
+    "voice",
+    "phone",
+    "call",
+    "automation"
+  ],
+  "license": "MIT",
+  "homepage": "https://pathors.com",
+  "author": {
+    "name": "Cerana Studio",
+    "email": "support@pathors.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CeranaStudio/pathors.git"
+  },
+  "engines": {
+    "node": ">=20.0"
+  },
+  "main": "dist/nodes/Pathors/Pathors.node.js",
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier nodes credentials --write",
+    "lint": "eslint nodes credentials package.json",
+    "lintfix": "eslint nodes credentials package.json --fix",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/PathorsApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Pathors/Pathors.node.js",
+      "dist/nodes/Pathors/PathorsTrigger.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "gulp": "^5.0.1",
+    "n8n-workflow": "^1.0.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.0"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
