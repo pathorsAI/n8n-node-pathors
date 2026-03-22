@@ -1,5 +1,5 @@
 {
-  "name": "n8n-nodes-pathors",
+  "name": "@pathors/n8n-nodes-pathors",
   "version": "0.1.1",
   "description": "n8n community node for Pathors - AI voice agent platform",
   "keywords": [
