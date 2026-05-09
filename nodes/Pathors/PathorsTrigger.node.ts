@@ -55,7 +55,18 @@ export class PathorsTrigger implements INodeType {
           {
             name: 'Session Ended',
             value: 'session.ended',
-            description: 'Triggered when a session ends',
+            description: 'Triggered when a session ends (agent side)',
+          },
+          {
+            name: 'Call Ended',
+            value: 'call.ended',
+            description: 'Triggered when a phone call ends (telephony side)',
+          },
+          {
+            name: 'Session Finalized',
+            value: 'session.finalized',
+            description:
+              'Triggered after all session and call processing is complete; payload merges session + call data',
           },
         ],
         description: 'The events to listen for',
