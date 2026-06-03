@@ -68,6 +68,11 @@ export class PathorsTrigger implements INodeType {
             description:
               'Triggered after all session and call processing is complete; payload merges session + call data',
           },
+          {
+            name: 'Recording Ready',
+            value: 'recording.ready',
+            description: 'Triggered when a recording is ready to be downloaded. This is independent of the session.finalized event.',
+          }
         ],
         description: 'The events to listen for',
       },
